@@ -1,14 +1,7 @@
 from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support import expected_conditions as EC
-# from bs4 import BeautifulSoup
 import time
-import os, shutil
-
-from selenium.webdriver.support.wait import WebDriverWait
 
 url = 'https://hcs.eduro.go.kr/#/loginHome'
 
@@ -28,8 +21,8 @@ options.add_argument('disable-gpu')
 # 혹은 options.add_argument("--disable-gpu")
 
 # Headless Chrome에서 이미지 로딩을 막기 위한 설정
-prefs = {'profile.managed_default_content_settings.images': 2}
-options.add_experimental_option('prefs', prefs)
+# prefs = {'profile.managed_default_content_settings.images': 2}
+# options.add_experimental_option('prefs', prefs)
 
 # UserAgent값을 바꿔줍시다!
 options.add_argument("user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36")
