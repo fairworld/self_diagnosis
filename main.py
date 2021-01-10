@@ -43,7 +43,8 @@ link = '//*[@id="btnConfirm2"]'
 driver.find_element_by_xpath(link).click()
 driver.implicitly_wait(1)
 
-driver.find_element_by_xpath('//*[@id="WriteInfoForm"]/table/tbody/tr[2]/td/button').click()
+driver.find_element_by_xpath('//*[@id="WriteInfoForm"]/table/tbody/tr[1]/td/button').click()
+
 
 select = Select(driver.find_element_by_xpath('//*[@id="softBoardListLayer"]/div[2]/div[1]/table/tbody/tr[1]/td/select'))
 select.select_by_visible_text(region)
@@ -56,15 +57,16 @@ driver.find_element_by_xpath('//*[@id="softBoardListLayer"]/div[2]/div[1]/table/
 driver.find_element_by_xpath('//*[@id="softBoardListLayer"]/div[2]/div[1]/table/tbody/tr[3]/td[2]/button').click()
 driver.implicitly_wait(1)
 
-driver.find_element_by_xpath('//*[@id="softBoardListLayer"]/div[2]/div[1]/ul/li/p/a').click()
+driver.find_element_by_xpath('//*[@id="softBoardListLayer"]/div[2]/div[1]/ul/li/a/p/a').click()
 driver.implicitly_wait(1)
 
 driver.find_element_by_xpath('//*[@id="softBoardListLayer"]/div[2]/div[2]/input').click()
+
 driver.implicitly_wait(1)
 
-driver.find_element_by_xpath('//*[@id="WriteInfoForm"]/table/tbody/tr[3]/td/input').send_keys(name)
-driver.find_element_by_xpath('//*[@id="WriteInfoForm"]/table/tbody/tr[4]/td/input').send_keys(birth)
-driver.find_element_by_xpath('//*[@id="WriteInfoForm"]/table/tbody/tr[4]/td/input').send_keys(Keys.ENTER)
+driver.find_element_by_xpath('//*[@id="WriteInfoForm"]/table/tbody/tr[2]/td/input').send_keys(name)
+driver.find_element_by_xpath('//*[@id="WriteInfoForm"]/table/tbody/tr[3]/td/input').send_keys(birth)
+driver.find_element_by_xpath('//*[@id="WriteInfoForm"]/table/tbody/tr[3]/td/input').send_keys(Keys.ENTER)
 
 driver.find_element_by_xpath("//input[@title='비밀번호']").send_keys(password)
 driver.find_element_by_xpath("//input[@value='확인 / Confirm']").click()
@@ -77,7 +79,7 @@ time.sleep(1)
 driver.find_element_by_xpath('//*[@id="container"]/div/div/div[2]/div[2]/dl[1]/dd/ul/li[1]/label').click()
 driver.find_element_by_xpath('//*[@id="container"]/div/div/div[2]/div[2]/dl[2]/dd/ul/li[1]/label').click()
 driver.find_element_by_xpath('//*[@id="container"]/div/div/div[2]/div[2]/dl[3]/dd/ul/li[1]/label').click()
-driver.find_element_by_xpath('//*[@id="container"]/div/div/div[2]/div[2]/dl[4]/dd/ul/li[1]/label').click()
-driver.find_element_by_xpath('//*[@id="container"]/div/div/div[2]/div[2]/dl[5]/dd/ul/li[1]/label').click()
+# driver.find_element_by_xpath('//*[@id="container"]/div/div/div[2]/div[2]/dl[4]/dd/ul/li[1]/label').click()
+# driver.find_element_by_xpath('//*[@id="container"]/div/div/div[2]/div[2]/dl[5]/dd/ul/li[1]/label').click()
 
-driver.find_element_by_xpath("//input[@value='제출 / Submit']").click()
+driver.find_element_by_xpath("//input[@id='btnConfirm']").click()
